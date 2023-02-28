@@ -10,20 +10,22 @@ class Shape{
         $this->ancho=$ancho;
         $this->alto=$alto;        
     }
+
+    public function area(){
+        return $this->ancho*$this->alto;
+    }
 }
 
 class Triangle extends Shape{
 
     public function area(){
-        return ($this->ancho*$this->alto)/2;
+        return parent::area()/2;
     }
 }
 
 class Rectangle extends Shape {
 
-    public function area(){
-        return $this->ancho*$this->alto;
-    }
+   
 }
 
 //definiendo objetos
